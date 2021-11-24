@@ -1,0 +1,131 @@
+.footer {
+  background-image: url('https://ld-wp.template-help.com/wordpress_prod-19263/v1/wp-content/uploads/2018/07/section-bg_05.jpg');
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 64px;
+
+  b {
+    margin-right: 5px;
+    margin-left: 5px;
+    color: var(--color-primary);
+  }
+
+  &__top {
+    margin-bottom: 53px;
+  }
+
+  &__bottom {
+    @include flex($align-items: center);
+
+    background-color: #171b40;
+    padding: 5px 0;
+    min-height: 40px;
+    text-align: center;
+    color: #b8b8b8;
+  }
+
+  &__wrapper {
+    @include flex;
+
+    @include media-max(map_get($grid-breakpoints, md)) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 8px;
+    margin-bottom: 5px;
+    min-height: 30px;
+    font-size: 20px;
+  }
+
+  &__logo {
+    margin-bottom: var(--base-margin);
+  }
+
+  &__nav {
+    display: block;
+    margin-bottom: 5px;
+    padding-right: 10px;
+    font-weight: var(--typography-bold);
+
+    &:hover,
+    &--active {
+      color: var(--color-primary);
+    }
+  }
+
+  &__block {
+    margin-bottom: 10px;
+  }
+
+  &__link {
+    @include line-clamp(1);
+
+    &:hover {
+      color: var(--color-accent);
+    }
+  }
+
+  &__menu {
+
+    &:first-child {
+      flex: 2;
+    }
+
+    &:last-child {
+      flex: 1;
+    }
+
+    @include media-max(map_get($grid-breakpoints, md)) {
+      display: block;
+      flex: unset!important;
+      width: 100%;
+    }
+  }
+
+  &__href {
+    display: block;
+    color: var(--color-primary);
+
+    &:hover {
+      color: var(--color-white);
+    }
+  }
+
+  &__subscribe {
+    @include size(100%, 40px);
+
+    position: relative;
+    margin-top: var(--base-margin);
+  }
+
+  &__field {
+    @include size(100%);
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    background-color: transparent;
+    padding-right: 130px;
+    padding-left: 20px;
+    color: #d8d8d8;
+
+    &::placeholder {
+      color: var(--color-white)
+    }
+
+    &:focus {
+      outline: 0;
+      border-color: var(--color-primary);
+    }
+  }
+
+  &__button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 120px;
+  }
+}

@@ -1,23 +1,171 @@
 ---
-title: enestech | IT-holding
+title: Portfolio
 lang: en
-hasLink: false
-isHeaderTransparent: true
 ---
 extends layouts/_layout
 
 block content
   main
-    include sections/_hero-section
-    include sections/_worldwide
-    include sections/_arenas
-    include sections/_tops
-    include sections/_offer
+    section.section#launch(style="background-position: center center")
+      .container-fluid
+        .container
+          .row.f-justify-spaced
+            .col-12.col-md-5.padding-vertical
+              +subtitle('The Number of Token Sales Keeps Rising').subtitle--left
+              .list
+                .list__item
+                  p Positioning - we do benchmarking
+                .list__item
+                  p Roadshow - we organize private investor
+              +button('Whitepaper').button--primary
+            .col-12.col-md-5.padding-vertical
+              .align-center
+                h5.h5 TOKEN ENDS IN:
+              +timer
+              hr.hr
+              +range
+              +button('Buy token').button--primary
 
-    hr.u-section-hr.u-hidden-sm.u-mt-16.u-mb-48.u-my-64-md
+          .row(style="margin-top: 50px")
+            .col-12.col-md-3.padding-vertical
+              +counter('859+', 'Projects Consulted')
+            .col-12.col-md-3.padding-vertical
+              +counter('678+', 'Mobile Apps')
+            .col-12.col-md-3.padding-vertical
+              +counter('345+', 'Instant Exchange')
+            .col-12.col-md-3.padding-vertical
+              +counter('209+', 'Easy & secure')
 
-    include sections/_membership
+    section.section#checklist
+      .container-fluid
+        .container
+          .row
+            .col-12.col-md-6.padding-vertical
+              img(src="https://ld-wp.template-help.com/wordpress_prod-19263/v1/wp-content/uploads/2018/07/iPad_Pro_Smart_Keyboard.png").img
+            .col-12.col-md-6.padding-vertical
+              +subtitle('How does it work?', 'Using Bitcoin according to your desire will be full with one of digital wallets. They give unlimited opportunities').subtitle--left
+              .row
+                .col-12.col-sm-6.padding-vertical
+                  .row.f-align-center
+                    .col-2.col-sm-4.padding-vertical
+                      img(src="https://ld-wp.template-help.com/wordpress_prod-19263/v1/wp-content/uploads/2018/07/icon1.svg").img
+                    .col-10.col-sm-8.padding-vertical
+                      h4.h4.margin Bearer Ecash
+                      p Replacing currency
+                .col-12.col-sm-6.padding-vertical
+                  .row.f-align-center
+                    .col-2.col-sm-4.padding-vertical
+                      img(src="https://ld-wp.template-help.com/wordpress_prod-19263/v1/wp-content/uploads/2018/07/icon2.svg").img
+                    .col-10.col-sm-8.padding-vertical
+                      h4.h4.margin Privacy
+                      p Feature is what Bitcoin
+                .col-12.col-sm-6.padding-vertical
+                  .row.f-align-center
+                    .col-2.col-sm-4.padding-vertical
+                      img(src="https://ld-wp.template-help.com/wordpress_prod-19263/v1/wp-content/uploads/2018/07/icon3.svg").img
+                    .col-10.col-sm-8.padding-vertical
+                      h4.h4.margin No Permissions
+                      p Nature of Bitcoin
+                .col-12.col-sm-6.padding-vertical
+                  .row.f-align-center
+                    .col-2.col-sm-4.padding-vertical
+                      img(src="https://ld-wp.template-help.com/wordpress_prod-19263/v1/wp-content/uploads/2018/07/icon4.svg").img
+                    .col-10.col-sm-8.padding-vertical
+                      h4.h4.margin Fungibility
+                      p Attribute of any money
+                .col-12.padding-vertical
+                  +button('Start Token').button--primary
 
-    hr.u-section-hr.u-hidden-sm.u-my-48-sm.u-my-64-md
+    section.section#pricing
+      .container-fluid
+        .container
+          .row
+            .col-12.col-lg-6.padding-vertical
+              +subtitle('How to buy Tokens', 'With its help you can foresee how much you wish to invest and how much profit you will receive.').subtitle--left
+              +table
+              +payments
+              +button('Buy Tokens Now!').button--primary
+            .col-12.col-lg-6.padding-vertical
+              .row
+                .col-12.col-sm-6
+                  +pricing-table(3).pricing-table--primary
+                .col-12.col-sm-6
+                  +pricing-table(2).pricing-table--secondary
 
-    include sections/_contact-us
+    section.section#teamship
+      .container-fluid
+        .container
+          .row
+            .col-12.padding-vertical
+              +subtitle('Our Teamship', 'Bitcoin is a virtual currency that uses cryptographic encryption system.')
+            .col-12.padding-vertical
+              .row
+                .col-12.col-md-6.col-lg-3.padding-vertical
+                  +team-member('https://ld-wp.template-help.com/wordpress_prod-19263/v1/wp-content/uploads/2018/07/team-1.png', 'Albert Green', 'With an expertise in strategy and business model')
+                .col-12.col-md-6.col-lg-3.padding-vertical
+                  +team-member('https://ld-wp.template-help.com/wordpress_prod-19263/v1/wp-content/uploads/2018/07/team-2.png', 'Mart Wallis', 'Mark was appointed Head of Marketing at ICOnyx.')
+                .col-12.col-md-6.col-lg-3.padding-vertical
+                  +team-member('https://ld-wp.template-help.com/wordpress_prod-19263/v1/wp-content/uploads/2018/07/team-3.png', 'Sam Nickson', 'Sam joined ICOnyx in February 2012.')
+                .col-12.col-md-6.col-lg-3.padding-vertical
+                  +team-member('https://ld-wp.template-help.com/wordpress_prod-19263/v1/wp-content/uploads/2018/07/team-4.png', 'David Linkoln', 'David was appointed Director of ICOnyx in 2009.')
+            .col-12.padding-vertical
+              +subtitle('Our Projects', 'Perfectly developed mobile apps will open you new opportunities in cryptocurrency mining and trading.')
+            .col-12.padding-vertical
+              .row
+                .col-12.padding-vertical
+                  +project-nav
+                .col-12.col-md-4.padding-vertical
+                  +project-smart("https://ld-wp.template-help.com/wordpress_prod-19263/v1/wp-content/uploads/2018/07/1-proj.png")
+                .col-12.col-md-4.padding-vertical
+                  +project-smart("https://ld-wp.template-help.com/wordpress_prod-19263/v1/wp-content/uploads/2018/07/2-proj.png")
+                .col-12.col-md-4.padding-vertical
+                  +project-smart("https://ld-wp.template-help.com/wordpress_prod-19263/v1/wp-content/uploads/2018/07/3-proj.png")
+                .col-12.padding-vertical
+                  .align-center
+                    +button('Load More').button--primary
+
+    section.section#faqs
+      .container-fluid
+        .container
+          .row
+            .col-12.padding-vertical
+              +subtitle('Frequently Asked Questions', 'Digital wallets have been the primary form of payment for a while now and Bitcoin.')
+            .col-12.padding-vertical
+              .row
+                .col-12.col-md-6
+                  .js-accordion-list
+                    +accordion('Q. Cryptocurrency - Who Are Involved With It?', 'A. Since the moment of Bitcoin’s appearance, I started some kind of a heavy research about the people involved with it.').accordion--active
+                    +accordion('Q. Which cryptocurrency is best to buy today?', 'Buy Bitcoin – after your wallet has been downloaded you are able to buy bitcoin via an online exchange.')
+                .col-12.col-md-6
+                  .js-accordion-list
+                    +accordion('Q. Are There Taxes On Bitcoins?', 'A. Bitcoin is a virtual currency that uses cryptographic encryption system to facilitate secure transfers and storage.')
+                    +accordion('Q. Bitcoin vs. Bitcoin Cash: What is the Difference ?', 'A. Since its inception, there have been questions surrounding Bitcoin’s ability to scale effectively').accordion--active
+                    +accordion('Q. Who Are Involved With It?', 'A. Since the moment of Bitcoin’s appearance, I started some kind of a heavy research about the people involved\n')
+
+          .row(style="margin-top: 50px")
+            .col-12.padding-vertical
+              .row
+                .col-12.col-md-4.col-lg-2.padding-vertical
+                  +brand-smart("https://ld-wp.template-help.com/wordpress_prod-19263/v1/wp-content/uploads/2018/07/newscom.svg")
+                .col-12.col-md-4.col-lg-2.padding-vertical
+                  +brand-smart("https://ld-wp.template-help.com/wordpress_prod-19263/v1/wp-content/uploads/2018/07/icolanding.svg")
+                .col-12.col-md-4.col-lg-2.padding-vertical
+                  +brand-smart("https://ld-wp.template-help.com/wordpress_prod-19263/v1/wp-content/uploads/2018/07/tokencase.svg")
+                .col-12.col-md-4.col-lg-2.padding-vertical
+                  +brand-smart("https://ld-wp.template-help.com/wordpress_prod-19263/v1/wp-content/uploads/2018/07/btcchek.svg")
+                .col-12.col-md-4.col-lg-2.padding-vertical
+                  +brand-smart("https://ld-wp.template-help.com/wordpress_prod-19263/v1/wp-content/uploads/2018/07/mybitco.svg")
+                .col-12.col-md-4.col-lg-2.padding-vertical
+                  +brand-smart("https://ld-wp.template-help.com/wordpress_prod-19263/v1/wp-content/uploads/2018/07/consultico.svg")
+
+          .row(style="margin-top: 50px")
+            .col-12.padding-vertical
+              +subtitle('Latest Blog', 'Digital wallets have been the primary form of payment for a while now and Bitcoin.')
+            .col-12.padding-vertical
+              .row
+                .col-12.col-md-4.padding-vertical
+                  +post-smart
+                .col-12.col-md-4.padding-vertical
+                  +post-smart
+                .col-12.col-md-4.padding-vertical
+                  +post-smart

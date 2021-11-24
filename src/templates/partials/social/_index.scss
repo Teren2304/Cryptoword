@@ -1,0 +1,30 @@
+.social {
+  @include flex($align-items: center, $wrap: wrap);
+
+  &__item {
+    @include flex(center, center);
+    @include size(20px);
+
+    margin-right: 10px;
+    margin-bottom: 5px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+
+      .social {
+
+        &__icon {
+          color: var(--color-primary);
+        }
+      }
+    }
+  }
+
+  &__icon {
+    transition: all 0.3s;
+    color: var(--color-white);
+  }
+}

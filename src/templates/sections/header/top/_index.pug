@@ -1,0 +1,11 @@
+- var values = ["Bitcoin", "Etherum", "Union", "Ripple", "DigitalCash", "Bitcash", "Veritaseum", "XRP", "Solana", "Tether"]
+
+mixin top
+  .top&attributes(attributes)
+    .container-fluid
+      .container
+        .top__slider.js-top-slider
+          each val in values
+            .top__item
+              span.top__text= val
+              span.top__value +0.034

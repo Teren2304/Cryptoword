@@ -1,0 +1,16 @@
+.payments {
+  @include flex($align-items: center);
+
+  margin-bottom: var(--base-margin);
+
+  &__item {
+    @include size(72px 30px);
+
+    display: block;
+    margin-right: 15px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

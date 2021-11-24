@@ -1,0 +1,8 @@
+mixin accordion(title, text)
+  .accordion.js-accordion&attributes(attributes)
+    .accordion__header
+      .accordion__label= title
+      .accordion__icon
+        i.fa.fa-angle-down
+    .accordion__body
+      p.accordion__text= text

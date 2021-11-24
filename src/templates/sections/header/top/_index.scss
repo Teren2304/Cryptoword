@@ -1,0 +1,36 @@
+.top {
+  @include flex($align-items: center);
+
+  padding-top: 5px;
+  height: 41px;
+
+  &__slider {
+    @include flex($align-items: center);
+
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  &__item {
+    @include flex(center, center);
+
+    flex-shrink: 0;
+    border-right: 1px solid rgba(#fff, 0.2);
+    padding: 0 10px;
+    min-width: 170px;
+    text-align: center;
+    font-weight: var(--typography-medium);
+
+    &:last-child {
+      border-right: 0;
+    }
+  }
+
+  &__text {
+    margin-right: 10px;
+  }
+
+  &__value {
+    color: var(--color-primary);
+  }
+}

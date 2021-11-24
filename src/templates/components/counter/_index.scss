@@ -1,0 +1,23 @@
+.counter {
+  transition: all 0.3s;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 5px 10px 20px;
+  height: 100%;
+  text-align: center;
+
+  &__title,
+  &__text {
+    margin: 0;
+  }
+
+  &__title {
+    color: var(--color-primary);
+    font-size: 38px;
+  }
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}

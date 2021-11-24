@@ -1,0 +1,23 @@
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #222866;
+
+  [class^='container'] {
+    height: 100%;
+  }
+
+  .container {
+    @include flex(space-between, center);
+
+    min-height: 88px;
+
+    @include media-max(map_get($grid-breakpoints, lg)) {
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+}

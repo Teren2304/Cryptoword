@@ -1,0 +1,57 @@
+mixin footer
+  footer.footer&attributes(attributes)
+    .container-fluid.footer__top
+      .container
+        .row
+          .col-12.col-md-6.col-lg-3.padding-vertical
+            +logo.footer__logo
+            p
+              | Using Bitcoin according to your desire will be full with one of digital
+              b wallets.
+
+          .col-12.col-md-6.col-lg-2.padding-vertical
+              h4.h4.footer__subtitle Latest Blog
+              .footer__block
+                a(href="#").footer__link How Crypto Begun Lorem ipsum dolor si
+                a(href="#").footer__href 20 July
+
+              .footer__block
+                a(href="#").footer__link How Crypto Begun Lorem ipsum dolor si
+                a(href="#").footer__href 20 July
+
+          .col-12.col-md-6.col-lg-3.padding-vertical
+            h4.h4.footer__subtitle Links
+
+            .footer__wrapper
+              ul.footer__menu
+                li.footer__item
+                  a(href="#").footer__nav ICO list
+                li.footer__item
+                  a(href="#").footer__nav Our approach
+                li.footer__item
+                  a(href="#").footer__nav History
+                li.footer__item
+                  a(href="#").footer__nav News
+
+              ul.footer__menu
+                li.footer__item
+                  a(href="#").footer__nav Token
+                li.footer__item
+                  a(href="#").footer__nav Services
+                li.footer__item
+                  a(href="#").footer__nav Contact us
+                li.footer__item
+                  a(href="#").footer__nav Whitepaper
+
+          .col-12.col-md-6.col-lg-4.padding-vertical
+            h4.h4.footer__subtitle Subscribe
+            p Sign up for Alerts, Special Offers, Education and Updates.
+            .footer__subscribe
+              input(type="email" placeholder="Enter your email..." required).footer__field
+              +button('Subscribe').button--primary.footer__button
+
+    .container-fluid.footer__bottom
+      .container
+        .row
+          .col-12
+            span © 2018 Cryptword Inc and Web Templates Ltd.

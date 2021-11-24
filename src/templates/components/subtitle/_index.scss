@@ -1,0 +1,22 @@
+.subtitle {
+  margin-bottom: var(--base-margin);
+  text-align: center;
+
+  b {
+    margin-right: 5px;
+    margin-left: 5px;
+    color: var(--color-primary);
+  }
+
+  &__head {
+    font-size: 32px;
+  }
+
+  &__text {
+    font-size: 16px;
+  }
+
+  &--left {
+    text-align: left;
+  }
+}

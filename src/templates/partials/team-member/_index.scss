@@ -1,0 +1,22 @@
+.team-member {
+  margin-bottom: var(--base-margin);
+  text-align: center;
+
+  &__img {
+    @include size(202px);
+
+    margin: 0 auto 20px;
+    border-radius: 50%;
+  }
+
+  &__social {
+    @include flex(center, center);
+  }
+
+  &__description {
+    @include line-clamp(2);
+
+    margin-bottom: 10px;
+    padding: 0 20px;
+  }
+}

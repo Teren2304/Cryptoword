@@ -1,0 +1,49 @@
+.accordion {
+  margin-bottom: 10px;
+  font-size: 16px;
+
+  &__header {
+    position: relative;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    padding: 14px 50px 14px 30px;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    transition: all 0.3s;
+  }
+
+  &__label {
+    @include line-clamp(1);
+
+    color: var(--color-white);
+    font-weight: var(--typography-bold);
+  }
+
+  &__body {
+    display: none;
+    padding: 13px 35px;
+  }
+
+  &--active {
+
+    .accordion {
+
+      &__header {
+        background-color: var(--color-secondary);
+      }
+
+      &__body {
+        display: block;
+      }
+
+      &__icon {
+        transform: rotateZ(180deg);
+      }
+    }
+  }
+}

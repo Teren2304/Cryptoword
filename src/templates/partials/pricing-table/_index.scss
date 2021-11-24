@@ -1,0 +1,83 @@
+.pricing-table {
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 30px;
+  background-color: #252a5f;
+  overflow: hidden;
+  color: var(--color-white);
+
+  .list {
+    margin-bottom: 5px;
+    color: var(--color-primary);
+  }
+
+  .button {
+    margin-top: var(--base-margin);
+  }
+
+  &__header {
+    padding: 10px;
+
+    * {
+      margin: 0;
+    }
+  }
+
+  &__body {
+    @include flex(center, center, column);
+
+    text-align: center;
+  }
+
+  &--primary {
+    z-index: 1;
+    margin: 8px -46px 0 16px;
+
+    .pricing-table {
+
+      &__header {
+        background: var(--gradient-horizontal);
+      }
+
+      &__body {
+        padding: 20px 10px 40px;
+      }
+    }
+  }
+
+  &--secondary {
+    margin: 46px 11px 0 5px;
+
+    .pricing-table {
+
+      &__header {
+        background: linear-gradient(107deg, #4151fe 19%, #63cfcc 96%);
+        padding: 6px 10px;
+
+        .h2 {
+          font-size: 20px;
+
+          @include media-max(map_get($grid-breakpoints, sm)) {
+            font-size: 24px;
+          }
+        }
+
+        @include media-max(map_get($grid-breakpoints, sm)) {
+          padding: 10px;
+        }
+      }
+
+      &__body {
+        padding: 8px 8px 20px;
+
+        @include media-max(map_get($grid-breakpoints, sm)) {
+          padding: 20px 10px 40px;
+        }
+      }
+    }
+  }
+
+  @include media-max(map_get($grid-breakpoints, sm)) {
+    margin: 10px;
+  }
+}

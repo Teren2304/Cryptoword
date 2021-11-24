@@ -1,0 +1,20 @@
+.project-nav {
+  @include flex(center, center, row, wrap);
+
+  margin-bottom: var(--base-margin);
+
+  &__item {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 4px 16px;
+    font-size: 16px;
+    font-weight: var(--typography-bold);
+
+    &:hover,
+    &--active {
+      background-color: var(--color-primary);
+    }
+  }
+}

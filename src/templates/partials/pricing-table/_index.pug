@@ -1,0 +1,16 @@
+mixin pricing-table(count)
+  .pricing-table&attributes(attributes)
+    .pricing-table__header
+      .align-center
+        h2.h2 Premium Sale
+        p April 23, 2018
+    .pricing-table__body
+      h3.h3 1 ETH = up to 41,000 STMX
+      .list
+        - var n = 0
+        while (n < count)
+          .list__item(data=n++)
+            p up to 39% bonus
+      b 150.000.000 STMX
+      b (up to $6 million)
+      +button('Buy Now!').button--primary
